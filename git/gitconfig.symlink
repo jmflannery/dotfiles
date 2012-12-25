@@ -6,16 +6,16 @@
 [hub]
         protocol = https
 [user]
-        name = Zach Holman
-        email = zach@zachholman.com
-        helper = /opt/boxen/bin/boxen-git-credential
+        name = Jack Flannery
+        email = jmflannery81@gmail.com
+        #helper = /opt/boxen/bin/boxen-git-credential
         # FIXME: You'll want the `helper` line below; delete the one above.
         # helper = osxkeychain
 [alias]
         co = checkout
-        promote = !$ZSH/bin/git-promote
-        wtf     = !$ZSH/bin/git-wtf
-        rank-contributers = !$ZSH/bin/git-rank-contributers
+        #promote = !$ZSH/bin/git-promote
+        #wtf     = !$ZSH/bin/git-wtf
+        #rank-contributers = !$ZSH/bin/git-rank-contributers
         count   = !git shortlog -sn
 [color]
         diff = auto
@@ -23,7 +23,7 @@
         branch = auto
         ui = true
 [core]
-        excludesfile = /opt/boxen/config/git/gitignore
+        #excludesfile = /opt/boxen/config/git/gitignore
         # FIXME: You'll want the `excludesfile` line below; delete the one above.
         # excludesfile = ~/.gitignore
         editor = vim
@@ -31,6 +31,8 @@
         whitespace = nowarn
 [mergetool]
         keepBackup = false
+[diff]
+        tool = vimdiff
 [difftool]
         prompt = false
 [help]
@@ -38,4 +40,4 @@
 
 # FIXME: You can nuke all of this on your machine.
 [credential]
-        helper = /opt/boxen/bin/boxen-git-credential
+        #helper = /opt/boxen/bin/boxen-git-credential
