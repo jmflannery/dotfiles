@@ -1,0 +1,9 @@
+[submodule "vim/vim.symlink/bundle/command-t"]
+	path = vim/vim.symlink/bundle/command-t
+	url = git://git.wincent.com/command-t.git
+[submodule "gnome-terminal-colors-solarized"]
+	path = gnome-terminal-colors-solarized
+	url = git://github.com/sigurdga/gnome-terminal-colors-solarized.git
+[submodule "vim/vim.symlink/bundle/gnome-terminal-colors-solarized"]
+	path = vim/vim.symlink/bundle/gnome-terminal-colors-solarized
+	url = git://github.com/sigurdga/gnome-terminal-colors-solarized.git
