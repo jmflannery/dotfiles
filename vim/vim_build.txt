@@ -1,8 +1,8 @@
 sudo apt-get install libncurses5-dev libgtk2.0-dev libatk1.0-dev libx11-dev libxt-dev
 
 ./configure \
-    --enable-perlinterp=dynamic \
-    --enable-rubyinterp=dynamic \
+    --enable-perlinterp \
+    --enable-rubyinterp \
     --enable-cscope \
     --enable-gui=auto \
     --enable-gtk2-check \
