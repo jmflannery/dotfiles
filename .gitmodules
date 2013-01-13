@@ -3,7 +3,7 @@
 	url = git://git.wincent.com/command-t.git
 [submodule "gnome-terminal-colors-solarized"]
 	path = gnome-terminal-colors-solarized
-	url = git://github.com/sigurdga/gnome-terminal-colors-solarized.git
+	url = git@github.com:sigurdga/gnome-terminal-colors-solarized.git
 [submodule "vim/vim.symlink/bundle/gnome-terminal-colors-solarized"]
 	path = vim/vim.symlink/bundle/gnome-terminal-colors-solarized
 	url = git://github.com/sigurdga/gnome-terminal-colors-solarized.git
@@ -22,3 +22,6 @@
 [submodule "vim/vim.symlink/bundle/vim-rails"]
 	path = vim/vim.symlink/bundle/vim-rails
 	url = git@github.com:tpope/vim-rails.git
+[submodule "gnome-terminal/gnome-terminal-colors-solarized"]
+	path = gnome-terminal/gnome-terminal-colors-solarized
+	url = git@github.com:sigurdga/gnome-terminal-colors-solarized.git
