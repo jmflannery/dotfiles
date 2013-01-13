@@ -7,3 +7,9 @@
 [submodule "vim/vim.symlink/bundle/gnome-terminal-colors-solarized"]
 	path = vim/vim.symlink/bundle/gnome-terminal-colors-solarized
 	url = git://github.com/sigurdga/gnome-terminal-colors-solarized.git
+[submodule "vim/vim.symlink/bundle/endwise"]
+	path = vim/vim.symlink/bundle/endwise
+	url = git@github.com:tpope/vim-endwise.git
+[submodule "vim/vim.symlink/bundle/nerdtree"]
+	path = vim/vim.symlink/bundle/nerdtree
+	url = git@github.com:scrooloose/nerdtree.git
