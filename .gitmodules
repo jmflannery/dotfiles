@@ -34,3 +34,6 @@
 [submodule "vim/vim.symlink/bundle/VIM-Color-Picker"]
 	path = vim/vim.symlink/bundle/VIM-Color-Picker
 	url = git@github.com:vim-scripts/VIM-Color-Picker.git
+[submodule "vim/vim.symlink/bundle/vim-commentary"]
+	path = vim/vim.symlink/bundle/vim-commentary
+	url = git@github.com:tpope/vim-commentary.git
