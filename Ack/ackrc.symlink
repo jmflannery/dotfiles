@@ -1,5 +1,5 @@
 --type-add=js=.ejs
 --type-add=ruby=.erb
---type-add=css=.sass
+--type-add=css=.scss
 --type-add=ruby=.feature
 
