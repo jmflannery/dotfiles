@@ -28,3 +28,6 @@
 [submodule "vim/vim.symlink/bundle/vim-monokai"]
 	path = vim/vim.symlink/bundle/vim-monokai
 	url = git@github.com:sickill/vim-monokai.git
+[submodule "vim/vim.symlink/bundle/colorschemes"]
+	path = vim/vim.symlink/bundle/colorschemes
+	url = git@github.com:flazz/vim-colorschemes.git
