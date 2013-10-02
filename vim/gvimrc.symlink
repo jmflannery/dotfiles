@@ -1,8 +1,8 @@
-" hide toolbar and scroll bar
+" hide toolbar and scroll bar 
 set guioptions=Ace
 
 " set window size
-set lines=45 columns=145
+set lines=62 columns=180
 
 " colorscheme
 colorscheme railscasts
@@ -11,7 +11,7 @@ colorscheme railscasts
 set guifont=Source\ Code\ Pro\ 10
 
 " macVim: smooth fonts.
-set antialias 
+set antialias
 
 " Use UTF-8 everywhere.
 set encoding=utf-8
