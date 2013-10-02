@@ -50,6 +50,11 @@ set t_Co=16                      " 256 colors
 " color scheme
 colorscheme devbox-dark-256
 
+let mapleader=","
+
+imap <c-j> <esc>
+imap <c-l> <space>=><space>
+
 " Command T mappings
 map <leader>t :CommandTFlush<cr>\|:CommandT<cr>
 " Command T mappings for Rails
