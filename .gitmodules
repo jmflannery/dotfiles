@@ -31,3 +31,18 @@
 [submodule "vim/vim.symlink/bundle/colorschemes"]
 	path = vim/vim.symlink/bundle/colorschemes
 	url = git@github.com:flazz/vim-colorschemes.git
+[submodule "vim/vim.symlink/bundle/jasmine"]
+	path = vim/vim.symlink/bundle/jasmine
+	url = git://github.com/claco/jasmine.vim.git
+[submodule "vim/vim.symlink/bundle/tlib_vim"]
+	path = vim/vim.symlink/bundle/tlib_vim
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule "vim/vim.symlink/bundle/vim-addon-mw-utils"]
+	path = vim/vim.symlink/bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "vim/vim.symlink/bundle/vim-snipmate"]
+	path = vim/vim.symlink/bundle/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule "vim/vim.symlink/vim-javascript"]
+	path = vim/vim.symlink/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
