@@ -34,6 +34,31 @@ task :install do
   end
 end
 
+task :install_oh_my_zsh do
+  if File.exist?(File.join(ENV['HOME'], ".oh-my-zsh"))
+    puts "found ~/.oh-my-zsh"
+  else
+    print "install oh-my-zsh? [ynq] "
+    case $stdin.gets.chomp
+    when 'y'
+      puts "installing oh-my-zsh"
+      system %Q{git clone https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"}
+    when 'q'
+      exit
+    else
+      puts "skipping oh-my-zsh, you will need to change ~/.zshrc"
+    end
+  end
+end
+
+task :install_oh_my_zsh_custom do
+  linkables = Dir.glob('zsh/oh-my-zsh/custom/**')
+  target = "#{ENV["HOME"]}/.oh-my-zsh/custom"
+  linkables.each do |linkable|
+    puts `ln -s "$PWD/#{linkable}" "#{target}/#{linkable.split("/").last}"`
+  end
+end
+
 task :uninstall do
 
   Dir.glob('**/*.symlink').each do |linkable|
