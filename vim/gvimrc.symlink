@@ -5,10 +5,10 @@ set guioptions=Ace
 set lines=62 columns=180
 
 " colorscheme
-colorscheme railscasts
+colorscheme codeschool
 
 " GUI font
-set guifont=Source\ Code\ Pro\ 10
+set guifont=Inconsolata:h16
 
 " macVim: smooth fonts.
 set antialias
