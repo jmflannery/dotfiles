@@ -44,5 +44,5 @@ plugins=(git rails ruby bundle)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=~/bin:/usr/local/bin:${PATH}
+export PATH=~/bin:/usr/local/bin:$PATH:/usr/local/share/npm/bin
 # Customize to your needs...
