@@ -45,9 +45,8 @@ set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
-set t_Co=16                      " 256 colors
-
 " color scheme
+set t_Co=256 " 256 colors
 colorscheme devbox-dark-256
 
 let mapleader=","
