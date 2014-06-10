@@ -1,5 +1,5 @@
 " colorscheme
-colorscheme monokai
+colorscheme jellybeans+
 
 " Highlight the current line in Insert Mode
 autocmd! InsertEnter,InsertLeave * set cul!
