@@ -1,0 +1,8 @@
+" leader key
+let mapleader=","
+
+" escape
+imap <c-j> <esc>
+
+" 256 colors
+set t_Co=256

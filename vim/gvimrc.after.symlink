@@ -1,0 +1,11 @@
+" colorscheme
+colorscheme codeschool
+
+" GUI font
+set guifont=Source\ Code\ Pro:h14
+
+" hide toolbar and scroll bar 
+set guioptions=Ace
+
+" set window size
+set lines=35 columns=130

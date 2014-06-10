@@ -1,0 +1,6 @@
+" colorscheme
+colorscheme monokai
+
+" Highlight the current line in Insert Mode
+autocmd! InsertEnter,InsertLeave * set cul!
+
