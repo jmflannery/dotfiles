@@ -1,6 +1,11 @@
 " colorscheme
-colorscheme jellybeans+
+syntax enable
+colorscheme molokai
+let g:rehash256 = 1
+
+"set background=light
+"colorscheme solarized
+"colorscheme seti
 
 " Highlight the current line in Insert Mode
 autocmd! InsertEnter,InsertLeave * set cul!
-

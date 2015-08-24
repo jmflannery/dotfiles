@@ -1,10 +1,15 @@
 " colorscheme
-colorscheme codeschool
+colorscheme molokai
+let g:molokai_original = 1
+
+"set background=light
+"colorscheme solarized
+"colorscheme seti
 
 " GUI font
 set guifont=Source\ Code\ Pro:h14
 
-" hide toolbar and scroll bar 
+" hide toolbar and scroll bar
 set guioptions=Ace
 
 " set window size
