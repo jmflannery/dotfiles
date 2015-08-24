@@ -44,14 +44,27 @@ plugins=(git rails ruby bundle)
 
 source $ZSH/oh-my-zsh.sh
 
+export SHELL=zsh
+export EDITOR=atom
+export DOTFILES=$HOME/dotfiles
+
 # Customize to your needs...
 export PATH=~/bin:/usr/local/bin:$PATH
 
 # npm
 export PATH=$PATH:/usr/local/share/npm/bin
 
-# MAMP
-export PATH=/Applications/MAMP/bin/php/php5.5.3/bin:$PATH
+# Postgres.app
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
 
 # Heroku Toolbelt
-export PATH=/usr/local/heroku/bin:$PATH
+export PATH=$PATH:/usr/local/heroku/bin
+
+# npm
+export PATH=$PATH:~/npm/bin
+
+# Load all .zsh files in the dotfiles dir
+for f in $DOTFILES/**/*.zsh; do
+  source $f
+done
+
