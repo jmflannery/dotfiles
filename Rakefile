@@ -38,19 +38,16 @@ def symlinks
   config = {}
   linkables = Dir.glob('**/symlinks/*')
   linkables.each do |linker|
-    _, *parts = linker.split('/').reject{ |part| part == 'symlinks' }
+    _, file_or_dir, *dirs, file = linker.split('/').reject{ |part| part == 'symlinks' }
 
-    file_or_dir, *dirs, file = parts
     link = ".#{file_or_dir}"
-    if dirs
-      dirs.each do |dir|
-        link += "/#{dir}"
-      end
+    dirs and dirs.each do |dir|
+      link += "/#{dir}"
     end
     link += "/#{file}" if file
 
     target = "#{FileUtils.pwd}/#{linker}"
-    link = "#{ENV['HOME']}/#{link}".sub('.symlink', '')
+    link = "#{ENV['HOME']}/#{link}"
 
     config[link] = target
   end
@@ -80,7 +77,7 @@ task :uninstall do
 
     # Remove all symlinks created during installation
     if File.symlink?(link)
-      puts "REmoving #{link}"
+      puts "Removing #{link}"
       FileUtils.rm(link)
     end
     #
