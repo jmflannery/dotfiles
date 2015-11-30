@@ -1,38 +1,16 @@
 require 'rake'
 
-desc "Hook our dotfiles into system-standard positions."
+desc "Install our dotfiles into the required locations"
 task :install do
-  linkables = Dir.glob('*/**{.symlink}')
-  inner_linkables = Dir.glob('*{.link-content}')
+  symlinks.each do |link, target|
 
-  skip_all = false
-  overwrite_all = false
-  backup_all = false
+    skip_all = false
+    overwrite_all = false
+    backup_all = false
 
-  inner_linkables.each do |directory|
-    inner_links = Dir.glob("#{directory}/**/*")
-    inner_links.each do |inner_link|
-      source = "#{`pwd`.chomp}/#{inner_link}".chomp
-      path = inner_link.gsub('.link-content', '')
-      target = "#{ENV["HOME"]}/.#{path}"
-      if File.file?(source) && !File.exists?(target)
-        `ln -s "#{source}" "#{target}"` if !skip_all
-      elsif File.directory?(source) && !File.exists?(target)
-        FileUtils.mkdir(target)
-      end
-    end
-  end
-
-  linkables.each do |linkable|
-    overwrite = false
-    backup = false
-
-    file = linkable.split('/').last.split('.symlink').last
-    target = "#{ENV["HOME"]}/.#{file}"
-
-    if File.exists?(target) || File.symlink?(target)
+    if File.exists?(link) || File.symlink?(link)
       unless skip_all || overwrite_all || backup_all
-        puts "File already exists: #{target}, what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all"
+        puts "File already exists: #{link}, what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all"
         case STDIN.gets.chomp
         when 'o' then overwrite = true
         when 'b' then backup = true
@@ -42,11 +20,41 @@ task :install do
         when 's' then next
         end
       end
-      FileUtils.rm_rf(target) if overwrite || overwrite_all
-      `mv "$HOME/.#{file}" "$HOME/.#{file}.backup"` if backup || backup_all
+      FileUtils.mv link, "#{link}.backup" if backup || backup_all
+      FileUtils.rm_rf link if overwrite || overwrite_all
     end
-    `ln -s "$PWD/#{linkable}" "#{target}"` if !skip_all
+    FileUtils.ln_s target, link unless skip_all
   end
+end
+
+desc "list all system dotfiles with there symlink targets"
+task :list do
+  symlinks.each do |link, target|
+    puts "#{link} -> #{target}"
+  end
+end
+
+def symlinks
+  config = {}
+  linkables = Dir.glob('**/symlinks/*')
+  linkables.each do |linker|
+    _, *parts = linker.split('/').reject{ |part| part == 'symlinks' }
+
+    file_or_dir, *dirs, file = parts
+    link = ".#{file_or_dir}"
+    if dirs
+      dirs.each do |dir|
+        link += "/#{dir}"
+      end
+    end
+    link += "/#{file}" if file
+
+    target = "#{FileUtils.pwd}/#{linker}"
+    link = "#{ENV['HOME']}/#{link}".sub('.symlink', '')
+
+    config[link] = target
+  end
+  config
 end
 
 task :install_oh_my_zsh do
@@ -66,31 +74,20 @@ task :install_oh_my_zsh do
   end
 end
 
-task :install_oh_my_zsh_custom do
-  linkables = Dir.glob('zsh/oh-my-zsh/custom/**')
-  target = "#{ENV["HOME"]}/.oh-my-zsh/custom"
-  linkables.each do |linkable|
-    puts `ln -s "$PWD/#{linkable}" "#{target}/#{linkable.split("/").last}"`
-  end
-end
-
 task :uninstall do
 
-  Dir.glob('**/*.symlink').each do |linkable|
-
-    file = linkable.split('/').last.split('.symlink').last
-    target = "#{ENV["HOME"]}/.#{file}"
+  symlinks.each do |link, target|
 
     # Remove all symlinks created during installation
-    if File.symlink?(target)
-      FileUtils.rm(target)
+    if File.symlink?(link)
+      puts "REmoving #{link}"
+      FileUtils.rm(link)
     end
-
-    # Replace any backups made during installation
-    if File.exists?("#{ENV["HOME"]}/.#{file}.backup")
-      `mv "$HOME/.#{file}.backup" "$HOME/.#{file}"`
-    end
-
+    #
+    # # Replace any backups made during installation
+    # if File.exists?("#{ENV["HOME"]}/.#{file}.backup")
+    #   `mv "$HOME/.#{file}.backup" "$HOME/.#{file}"`
+    # end
   end
 end
 

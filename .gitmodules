@@ -1,12 +1,12 @@
-[submodule "vim/janus.symlink/molokai"]
-	path = vim/janus.symlink/molokai
-	url = git@github.com:tomasr/molokai.git
-[submodule "vim/janus.symlink/vim-colors-solarized"]
-	path = vim/janus.symlink/vim-colors-solarized
-	url = git@github.com:altercation/vim-colors-solarized.git
-[submodule "vim/janus.symlink/seti.vim"]
-	path = vim/janus.symlink/seti.vim
-	url = git@github.com:trusktr/seti.vim.git
 [submodule "colors/iTerm2-Color-Schemes"]
 	path = colors/iTerm2-Color-Schemes
 	url = git@github.com:mbadolato/iTerm2-Color-Schemes.git
+[submodule "vim/symlinks/janus/molokai"]
+	path = vim/symlinks/janus/molokai
+	url = git@github.com:tomasr/molokai.git
+[submodule "vim/symlinks/janus/seti.vim"]
+	path = vim/symlinks/janus/seti.vim
+	url = git@github.com:trusktr/seti.vim.git
+[submodule "vim/symlinks/janus/vim-colors-solarized"]
+	path = vim/symlinks/janus/vim-colors-solarized
+	url = git@github.com:altercation/vim-colors-solarized.git

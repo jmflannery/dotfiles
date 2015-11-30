@@ -19,6 +19,9 @@ nnoremap <Leader>wq! :wq!<CR>
 nnoremap <Leader>wqa :wqa<CR>
 nnoremap <Leader>wqa! :wqa!<CR>
 
+" go back to previous file
+nnoremap <Leader>b :b#<CR>
+
 " copy and paste system clipboard
 nnoremap <Leader>y "+y
 nnoremap <Leader>Y "+Y

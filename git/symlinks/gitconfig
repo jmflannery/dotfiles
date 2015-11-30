@@ -4,7 +4,7 @@
 # Also search in this file for FIXME- you'll want to well, fix them.
 
 [hub]
-        protocol = https
+        protocol = ssh
 [user]
         name = Jack Flannery
         email = jmflannery81@gmail.com
@@ -20,17 +20,16 @@
         branch = auto
         ui = true
 [core]
-        excludesfile = ~/.gitignore
         editor = vim
-[apply]
-        whitespace = nowarn
-[mergetool]
-        keepBackup = false
-[diff]
-      	tool = vimdiff
-[difftool]
-        prompt = false
+      	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+      	excludesfile = ~/.gitignore[apply]
+[web]
+      	browser = google-chrome
 [help]
         autocorrect = 1
 [push]
-      	default = simple
+        default = simple
+[diff]
+        tool = vimdiff
+[difftool]
+        prompt = false
