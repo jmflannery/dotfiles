@@ -28,3 +28,10 @@
 
 'atom-text-editor.vim-mode':
   'ctrl-j': 'vim-mode:reset-normal-mode'
+'atom-text-editor':
+  'ctrl-l': 'git-diff:move-to-next-diff'
+'.platform-darwin':
+  'ctrl-space s': 'git-plus:status'
+  'ctrl-space a': 'git-plus:add'
+  'ctrl-space c': 'git-plus:commit'
+  'ctrl-space p': 'git-plus:push'

@@ -1,34 +1,39 @@
 "*":
-  "exception-reporting":
-    userId: "005afcea-d713-dea6-ad54-b6ea4464635c"
-  "release-notes":
-    viewedVersion: "0.89.0"
-  welcome:
-    showOnStartup: false
-  metrics:
-    userId: "be6e9e9c4c6502c836a1455d2d2e6e9bb998cd25"
-  editor:
-    invisibles: {}
-    fontFamily: "Source Code Pro"
-    softWrapAtPreferredLineLength: true
-    preferredLineLength: 120
   core:
+    disabledPackages: [
+      "linter-eslint"
+      "term2"
+    ]
+    excludeVcsIgnoredPaths: false
     ignoredNames: [
       ".git"
       ".svn"
       ".DS_Store"
     ]
-    disabledPackages: [
-      "linter-eslint"
-      "term2"
-    ]
-  "tree-view":
-    hideVcsIgnoredFiles: true
-  "vim-mode": {}
-  whitespace:
-    removeTrailingWhitespace: false
-    ensureSingleTrailingNewline: false
+  editor:
+    fontFamily: "Source Code Pro"
+    invisibles: {}
+    preferredLineLength: 120
+    softWrapAtPreferredLineLength: true
+  "exception-reporting":
+    userId: "005afcea-d713-dea6-ad54-b6ea4464635c"
+  "git-plus": {}
+  metrics:
+    userId: "be6e9e9c4c6502c836a1455d2d2e6e9bb998cd25"
+  "rails-transporter": {}
+  "release-notes":
+    viewedVersion: "0.89.0"
   term2: {}
   "trailing-spaces":
     enableForIndentation: true
-  "git-plus": {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  "vim-mode": {}
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false
+    removeTrailingWhitespace: false
+".diff.source":
+  editor:
+    preferredLineLength: 120
