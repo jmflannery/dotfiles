@@ -10,11 +10,17 @@
       ".svn"
       ".DS_Store"
     ]
+    themes: [
+      "seti-ui"
+      "atom-dark-syntax"
+    ]
   editor:
     fontFamily: "Source Code Pro"
     invisibles: {}
     preferredLineLength: 120
+    showInvisibles: true
     softWrapAtPreferredLineLength: true
+    tabType: "soft"
   "exception-reporting":
     userId: "005afcea-d713-dea6-ad54-b6ea4464635c"
   "git-plus": {}
