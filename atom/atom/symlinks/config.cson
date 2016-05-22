@@ -1,4 +1,18 @@
 "*":
+  "atom-material-ui":
+    colors:
+      abaseColor:
+        red: 33
+        green: 150
+        blue: 243
+        alpha: 1
+      genAccent: true
+      predefinedColor: "Blue"
+    fonts: {}
+    tabs:
+      compactTabs: true
+    treeView:
+      compactList: true
   core:
     disabledPackages: [
       "linter-eslint"
@@ -11,11 +25,12 @@
       ".DS_Store"
     ]
     themes: [
-      "seti-ui"
-      "atom-dark-syntax"
+      "atom-material-ui"
+      "firewatch-syntax"
     ]
   editor:
-    fontFamily: "Source Code Pro"
+    fontFamily: "Anonymous Pro"
+    fontSize: 15
     invisibles: {}
     preferredLineLength: 120
     showInvisibles: true
