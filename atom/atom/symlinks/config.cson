@@ -2,10 +2,10 @@
   "atom-material-ui":
     colors:
       abaseColor:
-        red: 33
-        green: 150
-        blue: 243
         alpha: 1
+        blue: 243
+        green: 150
+        red: 33
       genAccent: true
       predefinedColor: "Blue"
     fonts: {}
@@ -17,6 +17,7 @@
     disabledPackages: [
       "linter-eslint"
       "term2"
+      "incompatible-packages"
     ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
@@ -25,12 +26,11 @@
       ".DS_Store"
     ]
     themes: [
-      "atom-material-ui"
-      "firewatch-syntax"
+      "seti-ui"
+      "monokai-seti"
     ]
   editor:
-    fontFamily: "Anonymous Pro"
-    fontSize: 15
+    fontFamily: "Source Code Pro "
     invisibles: {}
     preferredLineLength: 120
     showInvisibles: true
@@ -47,8 +47,7 @@
   term2: {}
   "trailing-spaces":
     enableForIndentation: true
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "tree-view": {}
   "vim-mode": {}
   welcome:
     showOnStartup: false
