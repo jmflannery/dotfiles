@@ -23,6 +23,8 @@ task :install do
       FileUtils.mv link, "#{link}.backup" if backup || backup_all
       FileUtils.rm_rf link if overwrite || overwrite_all
     end
+    dirname = File.dirname(link)
+    FileUtils.mkdir_p(dirname) unless Dir.exist?(dirname)
     FileUtils.ln_s target, link unless skip_all
   end
 end
@@ -40,10 +42,15 @@ def symlinks
   linkables.each do |linker|
     _, file_or_dir, *dirs, file = linker.split('/').reject{ |part| part == 'symlinks' }
 
+    # the hidden file or directory
     link = ".#{file_or_dir}"
+
+    # if we have dirs then this is a directory and we need to add the subdirectories
     dirs and dirs.each do |dir|
       link += "/#{dir}"
     end
+
+    # add the file
     link += "/#{file}" if file
 
     target = "#{FileUtils.pwd}/#{linker}"
