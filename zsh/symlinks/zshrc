@@ -51,9 +51,6 @@ export DOTFILES=$HOME/dotfiles
 # Customize to your needs...
 export PATH=~/bin:/usr/local/bin:$PATH
 
-# npm
-export PATH=$PATH:/usr/local/share/npm/bin
-
 # Postgres.app
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
 
@@ -73,4 +70,3 @@ source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
 alias mux=tmuxinator
-

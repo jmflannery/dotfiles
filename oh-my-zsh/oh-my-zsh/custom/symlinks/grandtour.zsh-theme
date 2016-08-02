@@ -1,6 +1,6 @@
 PROMPT='
 %{$fg[cyan]%}%n@%m%{$reset_color%}: %{$fg[yellow]%} $(get_pwd) $(git_prompt_info)%{$reset_color%}
-%{$fg[green]%}➠ %{$reset_color%} '
+%{$fg[green]%}ॐ >%{$reset_color%} '
 
 function get_pwd() {
   echo "${PWD/$HOME/~}"
