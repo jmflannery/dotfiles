@@ -23,14 +23,17 @@
     ignoredNames: [
       ".git"
       ".svn"
-      ".DS_Store"
+      "**/.DS_Store"
     ]
+    projectHome: "/Users/jack/projects"
+    telemetryConsent: "limited"
     themes: [
-      "seti-ui"
-      "monokai-seti"
+      "atom-dark-ui"
+      "oceanic-next"
     ]
+    useCustomTitleBar: true
   editor:
-    fontFamily: "Source Code Pro "
+    fontFamily: "Fira Code"
     invisibles: {}
     preferredLineLength: 120
     showInvisibles: true
@@ -38,7 +41,9 @@
     tabType: "soft"
   "exception-reporting":
     userId: "005afcea-d713-dea6-ad54-b6ea4464635c"
-  "git-plus": {}
+  "git-plus":
+    general:
+      _analyticsUserId: "70cb3d2d-8f8b-4508-9929-c641618035c5"
   metrics:
     userId: "be6e9e9c4c6502c836a1455d2d2e6e9bb998cd25"
   "rails-transporter": {}
@@ -47,8 +52,10 @@
   term2: {}
   "trailing-spaces":
     enableForIndentation: true
-  "tree-view": {}
-  "vim-mode": {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  "vim-mode":
+    useClipboardAsDefaultRegister: false
   welcome:
     showOnStartup: false
   whitespace:
