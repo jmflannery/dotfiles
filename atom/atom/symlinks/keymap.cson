@@ -26,12 +26,18 @@
 # Atom Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
 
-'atom-text-editor.vim-mode':
-  'ctrl-j': 'vim-mode:reset-normal-mode'
 'atom-text-editor':
   'ctrl-l': 'git-diff:move-to-next-diff'
+  'cmd n': 'tree-view:add-file'
+  'cmd f': 'tree-view:add-folder'
+  'cmd r': 'tree-view:rename'
+  'cmd d': 'tree-view:duplicate'
+  'cmd x': 'tree-view:remove'
+'atom-text-editor.vim-mode':
+  'ctrl-j': 'vim-mode:reset-normal-mode'
 '.platform-darwin':
-  'ctrl-space s': 'git-plus:status'
-  'ctrl-space a': 'git-plus:add'
-  'ctrl-space c': 'git-plus:commit'
-  'ctrl-space p': 'git-plus:push'
+  ', s': 'git-plus:status'
+  ', a': 'git-plus:add'
+  ', c': 'git-plus:commit'
+  ', p': 'git-plus:push'
+  ', c c': 'git-plus:checkout-current-file'
