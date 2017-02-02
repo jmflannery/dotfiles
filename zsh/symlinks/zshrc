@@ -60,6 +60,9 @@ export PATH=$PATH:/usr/local/heroku/bin
 # npm
 export PATH=$PATH:~/npm/bin
 
+# yarn
+export PATH=$PATH:/usr/local/Cellar/node/7.5.0/bin
+
 # Load all .zsh files in the dotfiles dir
 for f in $DOTFILES/**/*.zsh; do
   source $f
