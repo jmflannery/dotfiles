@@ -33,11 +33,12 @@
   'cmd r': 'tree-view:rename'
   'cmd d': 'tree-view:duplicate'
   'cmd x': 'tree-view:remove'
-'atom-text-editor.vim-mode':
-  'ctrl-j': 'vim-mode:reset-normal-mode'
+'atom-text-editor.vim-mode-plus':
+  'ctrl-j': 'vim-mode-plus:reset-normal-mode'
 '.platform-darwin':
   ', s': 'git-plus:status'
   ', a': 'git-plus:add'
   ', c': 'git-plus:commit'
   ', p': 'git-plus:push'
   ', c c': 'git-plus:checkout-current-file'
+

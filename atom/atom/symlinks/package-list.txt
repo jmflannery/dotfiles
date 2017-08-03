@@ -1,14 +1,10 @@
 atom-jade@0.3.0
 cucumber@0.5.0
 git-difftool@0.2.7
-git-plus@5.6.1
 language-haml@0.23.6
 linter@1.11.1
-linter-eslint@5.0.0
 monokai-seti@0.7.0
-monokai-soda@0.5.0
 seti-syntax@0.4.1
-seti-ui@0.8.1
 solarized-light-ui@0.1.0
 trailing-spaces@0.3.2
 vim-mode@0.63.0

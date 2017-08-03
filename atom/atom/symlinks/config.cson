@@ -29,9 +29,9 @@
     telemetryConsent: "limited"
     themes: [
       "atom-dark-ui"
-      "oceanic-next"
+      "monokai"
     ]
-    useCustomTitleBar: true
+    titleBar: "custom"
   editor:
     fontFamily: "Fira Code"
     invisibles: {}
@@ -44,16 +44,19 @@
   "git-plus":
     general:
       _analyticsUserId: "70cb3d2d-8f8b-4508-9929-c641618035c5"
+  "linter-ui-default":
+    panelHeight: 74
   metrics:
     userId: "be6e9e9c4c6502c836a1455d2d2e6e9bb998cd25"
   "rails-transporter": {}
   "release-notes":
     viewedVersion: "0.89.0"
+  "seti-ui":
+    compactView: true
   term2: {}
   "trailing-spaces":
     enableForIndentation: true
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "tree-view": {}
   "vim-mode":
     useClipboardAsDefaultRegister: false
   welcome:
