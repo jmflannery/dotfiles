@@ -1,69 +1,22 @@
 "*":
-  "atom-material-ui":
-    colors:
-      abaseColor:
-        alpha: 1
-        blue: 243
-        green: 150
-        red: 33
-      genAccent: true
-      predefinedColor: "Blue"
-    fonts: {}
-    tabs:
-      compactTabs: true
-    treeView:
-      compactList: true
   core:
     disabledPackages: [
-      "linter-eslint"
-      "term2"
-      "incompatible-packages"
-    ]
-    excludeVcsIgnoredPaths: false
-    ignoredNames: [
-      ".git"
-      ".svn"
-      "**/.DS_Store"
+      "whitespace"
     ]
     projectHome: "/Users/jack/projects"
     telemetryConsent: "limited"
     themes: [
       "atom-dark-ui"
-      "monokai"
+      "monokai-seti"
     ]
-    titleBar: "custom"
-  editor:
-    fontFamily: "Fira Code"
-    invisibles: {}
-    preferredLineLength: 120
-    showInvisibles: true
-    softWrapAtPreferredLineLength: true
-    tabType: "soft"
+  editor: {}
   "exception-reporting":
-    userId: "005afcea-d713-dea6-ad54-b6ea4464635c"
-  "git-plus":
-    general:
-      _analyticsUserId: "70cb3d2d-8f8b-4508-9929-c641618035c5"
+    userId: "d399a843-a5c5-45d9-8ffc-843ef3db5460"
   "linter-ui-default":
-    panelHeight: 74
-  metrics:
-    userId: "be6e9e9c4c6502c836a1455d2d2e6e9bb998cd25"
-  "rails-transporter": {}
-  "release-notes":
-    viewedVersion: "0.89.0"
-  "seti-ui":
-    compactView: true
-  term2: {}
-  "trailing-spaces":
-    enableForIndentation: true
-  "tree-view": {}
-  "vim-mode":
-    useClipboardAsDefaultRegister: false
+    panelHeight: 56
+  "terminal-plus":
+    core:
+      autoRunCommand: "source ~/.zshrc"
   welcome:
     showOnStartup: false
-  whitespace:
-    ensureSingleTrailingNewline: false
-    removeTrailingWhitespace: false
-".diff.source":
-  editor:
-    preferredLineLength: 120
+  whitespace: {}
