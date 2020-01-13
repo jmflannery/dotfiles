@@ -1,6 +1,6 @@
 PROMPT='
-%{$fg[cyan]%}%n@%m%{$reset_color%}: %{$fg[yellow]%} $(get_pwd) $(git_prompt_info)%{$reset_color%}
-%{$fg[green]%}ॐ >%{$reset_color%} '
+%{$FG[155]%}%n@%m%{$reset_color%}: %{$FG[193]%} $(get_pwd) $(git_prompt_info)%{$reset_color%}
+%{$FG[119]%}ॐ %{$reset_color%}% > '
 
 function get_pwd() {
   echo "${PWD/$HOME/~}"
@@ -13,5 +13,5 @@ function git_prompt_info() {
 
 ZSH_THEME_GIT_PROMPT_PREFIX="[git:"
 ZSH_THEME_GIT_PROMPT_SUFFIX="]%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}+"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$FG[197]%}+"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$FG[155]%}"
